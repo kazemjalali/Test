@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 started = true;
-                Toast.makeText(getBaseContext(), "salap", Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), "Scanning Begun!", Toast.LENGTH_LONG).show();
                 graphView.setVisibility(View.INVISIBLE);
             }
         });
@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 started = false;
+                Toast.makeText(getBaseContext(), "Scanning Finished!", Toast.LENGTH_LONG).show();
                 timer.cancel();
                 LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(data());
                 graphView.addSeries(series);
